@@ -54,3 +54,8 @@ LLM 응답: 찾아온 데이터를 바탕으로 챗봇이 답변을 생성합니
 
 # 무결성(Data Integrity)과 실무적인 관리 효율성을 고려할 때,
 ***[구글 폼 → 구글 앱스 스크립트 → Supabase 전송 → 성공 시 구글 시트 기록] 순서로 처리하는 것이 가장 확실
+
+
+# 인덱스 추가 (조회 성능 향상 - 취업용 디테일)
+create index idx_answers_user_email on survey_answers (user_email);
+create index idx_answers_question_no on survey_answers (question_no);
